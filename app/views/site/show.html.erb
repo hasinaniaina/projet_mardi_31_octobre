@@ -1,0 +1,25 @@
+<div class="header-page">
+	<h1>La liste des utilisateurs</h1>
+</div>
+<table class="table">
+  <thead class="black white-text">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Username</th>
+      <th scope="col">Email</th>
+      <th scope="col">Bio</th>
+    </tr>
+  </thead>
+  <tbody>
+  	<% @user.each do |user|%>
+    <tr>
+      <th scope="row"><%= user.id %></th>
+      <td><%= user.username %></td>
+      <td><%= user.email %></td>
+      <td><%= user.bio %></td>
+      <td><a href="/site/delete/<%= user.id %>" class="btn btn-danger">Delete</a></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+

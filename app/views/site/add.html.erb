@@ -1,0 +1,12 @@
+<div class="add">
+	<h1>Ajouter des utilisateurs</h1>
+	<%= form_tag '/site/user_added', method: 'POST' do %>
+		<%= label_tag 'Username' %>
+		<%= text_field_tag 'username',"", :class => "form-control" %>
+		<%= label_tag 'Email' %>
+		<%= text_field_tag 'email',"", :class => "form-control" %>
+		<%= label_tag 'Bio' %>
+		<%= text_area_tag 'bio',"", :class => "form-control" %>
+		<%= submit_tag 'Enregistrer', :class => "btn btn-success" %>
+	<% end %>
+</div>
